@@ -37,11 +37,22 @@ h1 {
   background-color: var(--white);
   border-radius: 25px;
   border: 2px solid var(--black);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--black);
+  color: var(--white);
 }
 
 .button-black {
   background-color: var(--black);
   color: var(--white);
+}
+
+.button-black:hover {
+  background-color: var(--white);
+  color: var(--black);
 }
 
 /* Navbar */
@@ -59,6 +70,10 @@ nav ul {
 nav li {
   padding-left: 1rem;
   font-size: 1.2rem;
+}
+
+nav li:hover {
+  color: var(--primary-color);
 }
 
 .logo {
