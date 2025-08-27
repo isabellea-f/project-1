@@ -67,6 +67,27 @@ nav li {
   letter-spacing: 1px;
 }
 
+@media (max-width: 750px) {
+  nav {
+    flex-direction: column;
+    padding: 1rem 2rem;
+    background-color: var(--black);
+    color: var(--white);
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  nav li {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--white);
+  }
+}
+
 /* Hero */
 #hero {
   display: flex;
@@ -95,4 +116,21 @@ nav li {
   display: flex;
   justify-content: center;
   gap: 1rem;
+}
+
+@media (max-width: 750px) {
+  #hero {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 2rem;
+  }
+
+  #hero img {
+    width: 250px;
+    height: 250px;
+  }
+
+  #hero .hero-text {
+    text-align: center;
+  }
 }
