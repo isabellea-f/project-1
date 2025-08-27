@@ -24,7 +24,7 @@ a {
   text-decoration: none;
 }
 
-ul {
+li {
   list-style: none;
 }
 
@@ -190,8 +190,29 @@ nav li:hover {
   }
 }
 
-/* Hobbies Section */
-.hobbies-section {
+/* About Section */
+.about-section {
+  background-color: var(--gray);
+  color: var(--white);
+}
+
+/* Footer */
+
+footer {
+  padding: 1.5rem 0;
   background-color: var(--black);
   color: var(--white);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+footer li {
+  margin-left: 2rem;
+}
+
+@media (max-width: 750px) {
+  footer {
+    flex-direction: column;
+  }
 }
