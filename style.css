@@ -16,6 +16,16 @@ body {
   font-family: "poppins", sans-serif;
   font-size: 16px;
   color: var(--black);
+  background: #ffffff;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 45%,
+    rgb(117, 160, 160) 100%
+  );
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* Text */
@@ -54,9 +64,9 @@ h4 {
   width: 7rem;
   text-align: center;
   padding: 0.5rem 0;
-  background-color: var(--white);
+  background-color: rgb(71, 105, 102);
+  color: var(--white);
   border-radius: 25px;
-  border: 2px solid var(--black);
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -82,16 +92,16 @@ h4 {
 }
 
 .card {
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--black);
+  color: var(--white);
   margin: 2rem;
-  padding: 4rem 2rem;
-  max-width: 25rem;
+  padding: 2rem;
+  max-width: 40rem;
   border-radius: 10px;
 }
 
 .card li {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
   margin: 1rem 0 0.5rem 0;
 }
@@ -100,7 +110,12 @@ h4 {
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 8rem;
+  align-items: center;
+  padding: 0.5rem 8rem;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: transparent;
 }
 
 nav ul {
@@ -129,6 +144,7 @@ nav li:hover {
     padding: 1rem 2rem;
     background-color: var(--black);
     color: var(--white);
+    position: relative;
   }
 
   nav ul {
@@ -150,12 +166,14 @@ nav li:hover {
   align-items: center;
   justify-content: center;
   gap: 6rem;
+  height: 90vh;
 }
 
 #hero img {
   width: 370px;
   height: 370px;
   border-radius: 100%;
+  object-fit: cover;
 }
 
 #hero-text {
@@ -177,7 +195,7 @@ nav li:hover {
   #hero {
     flex-direction: column;
     gap: 2rem;
-    padding: 3rem 2rem;
+    padding: 0 2rem;
   }
 
   #hero img {
@@ -192,12 +210,10 @@ nav li:hover {
 
 /* About Section */
 .about-section {
-  background-color: var(--gray);
-  color: var(--white);
+  color: var(--black);
 }
 
 /* Footer */
-
 footer {
   padding: 1.5rem 0;
   background-color: var(--black);
