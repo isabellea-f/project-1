@@ -24,8 +24,28 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
 h1 {
   font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.8rem;
+}
+
+/* Layout */
+.wrapper {
+  padding: 5rem 8rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /* Buttons */
@@ -53,6 +73,27 @@ h1 {
 .button-black:hover {
   background-color: var(--white);
   color: var(--black);
+}
+
+/* Cards */
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--white);
+  color: var(--black);
+  margin: 2rem;
+  padding: 4rem 2rem;
+  max-width: 25rem;
+  border-radius: 10px;
+}
+
+.card li {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 1rem 0 0.5rem 0;
 }
 
 /* Navbar */
@@ -109,7 +150,6 @@ nav li:hover {
   align-items: center;
   justify-content: center;
   gap: 6rem;
-  padding: 5rem 8rem;
 }
 
 #hero img {
@@ -148,4 +188,10 @@ nav li:hover {
   #hero .hero-text {
     text-align: center;
   }
+}
+
+/* Hobbies Section */
+.hobbies-section {
+  background-color: var(--black);
+  color: var(--white);
 }
