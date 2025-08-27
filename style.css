@@ -24,6 +24,26 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 2.5rem;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  width: 7rem;
+  text-align: center;
+  padding: 0.5rem 0;
+  background-color: var(--white);
+  border-radius: 25px;
+  border: 2px solid var(--black);
+}
+
+.button-black {
+  background-color: var(--black);
+  color: var(--white);
+}
+
 /* Navbar */
 nav {
   display: flex;
@@ -38,4 +58,41 @@ nav ul {
 
 nav li {
   padding-left: 1rem;
+  font-size: 1.2rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Hero */
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  padding: 5rem 8rem;
+}
+
+#hero img {
+  width: 370px;
+  height: 370px;
+  border-radius: 100%;
+}
+
+#hero-text {
+  text-align: center;
+}
+
+#hero h2 {
+  color: var(--gray);
+  margin-bottom: 2rem;
+}
+
+#hero .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
