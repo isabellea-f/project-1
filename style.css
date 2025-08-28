@@ -9,7 +9,8 @@
   --black: #2c2d2e;
   --white: #ffffff;
   --gray: #49494a;
-  --primary-color: #1f1fad;
+  --primary-color: #476966;
+  --accent-color: #47696657;
 }
 
 body {
@@ -58,6 +59,12 @@ h4 {
   text-align: center;
 }
 
+/* Colors */
+
+.bg-primary {
+  background-color: var(--accent-color);
+}
+
 /* Buttons */
 .button {
   display: inline-block;
@@ -92,12 +99,11 @@ h4 {
 }
 
 .card {
-  background-color: var(--black);
-  color: var(--white);
+  color: var(--black);
   margin: 2rem;
   padding: 2rem;
   max-width: 40rem;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 .card li {
@@ -116,6 +122,7 @@ nav {
   top: 0;
   overflow: hidden;
   background-color: transparent;
+  z-index: 1;
 }
 
 nav ul {
@@ -166,7 +173,7 @@ nav li:hover {
   align-items: center;
   justify-content: center;
   gap: 6rem;
-  height: 90vh;
+  height: 85vh;
 }
 
 #hero img {
@@ -213,10 +220,43 @@ nav li:hover {
   color: var(--black);
 }
 
+/* Timeline */
+.timeline-container {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 0.25rem 3rem;
+  align-items: center;
+}
+
+.year {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 1rem;
+  color: var(--gray);
+}
+
+.title {
+  font-size: 1.5rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.title:hover {
+  transform: translateX(-5px);
+  background-color: var(--accent-color);
+}
+
 /* Footer */
 footer {
   padding: 1.5rem 0;
-  background-color: var(--black);
+  background-color: var(--primary-color);
   color: var(--white);
   text-align: center;
   display: flex;
