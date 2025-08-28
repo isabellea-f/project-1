@@ -61,7 +61,7 @@ i {
 
 @media (max-width: 750px) {
   .wrapper {
-    padding: 5rem 3rem;
+    padding: 5rem 0;
   }
 }
 
@@ -112,13 +112,19 @@ i {
   margin: 2rem;
   padding: 2rem;
   max-width: 40rem;
-  /* border-radius: 10px; */
+  border-radius: 10px;
 }
 
 .card li {
   font-size: 1.1rem;
   font-weight: 500;
   margin: 1rem 0 0.5rem 0;
+}
+
+@media (max-width: 750px) {
+  .card-container {
+    flex-direction: column;
+  }
 }
 
 /* Navbar */
@@ -304,6 +310,20 @@ nav li:hover {
   .details {
     font-size: 0.95rem;
   }
+}
+
+/*Education*/
+.education-text {
+  text-align: center;
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.education-text h4 {
+  font-size: 1.5rem;
+  color: var(--gray);
+  margin-bottom: 2rem;
 }
 
 /* Footer */
