@@ -90,7 +90,7 @@ i {
 
 .bg-img {
   position: relative;
-  background: url("/project-1/images/laptop.jpg") center/cover no-repeat;
+  background: url("/images/laptop.jpg") center/cover no-repeat;
   color: var(--white);
 }
 
@@ -167,18 +167,17 @@ i {
 
 .card-flatmate {
   position: relative;
-  background: url("/project-1/images/laptop.jpg") center/cover no-repeat;
+  background: url("/images/laptop.jpg") center/cover no-repeat;
 }
 
 .card-devize {
   position: relative;
-  background: url("/project-1/images/developers-working.jpg") center/cover
-    no-repeat;
+  background: url("/images/developers-working.jpg") center/cover no-repeat;
 }
 
 .card-consid {
   position: relative;
-  background: url("/project-1/images/office-space.jpg") center/cover no-repeat;
+  background: url("/images/office-space.jpg") center/cover no-repeat;
 }
 
 .card-small::before {
