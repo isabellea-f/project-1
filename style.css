@@ -102,6 +102,10 @@ p {
   background-color: var(--black);
 }
 
+.text-accent {
+  color: var(--accent-color);
+}
+
 .bg-img {
   position: relative;
   background: url("/images/laptop.jpg") center/cover no-repeat;
