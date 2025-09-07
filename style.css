@@ -433,6 +433,10 @@ nav a:hover {
   color: var(--white);
 }
 
+iframe {
+  border: none;
+}
+
 /* Footer */
 footer {
   padding: 1.5rem 0;
