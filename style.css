@@ -6,7 +6,7 @@
 }
 
 :root {
-  --black: #141414;
+  --black: #111111;
   --white: #ffffff;
   --gray: #49494a;
   --primary-color: #e8eaea;
@@ -58,6 +58,10 @@ h4 {
 
 i {
   margin-right: 1rem;
+}
+
+.text-accent {
+  color: var(--accent-color);
 }
 
 /* Layout */
@@ -165,6 +169,14 @@ i {
   flex: 1;
 }
 
+.card-small::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+}
+
 .card-flatmate {
   position: relative;
   background: url("/project-1/images/laptop.jpg") center/cover no-repeat;
@@ -179,14 +191,6 @@ i {
 .card-consid {
   position: relative;
   background: url("/project-1/images/office-space.jpg") center/cover no-repeat;
-}
-
-.card-small::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 12px;
 }
 
 .card-small p {
@@ -256,6 +260,7 @@ nav a:hover {
   font-weight: 800;
   letter-spacing: 1px;
   border: 2px solid var(--accent-color);
+  pointer-events: none;
 }
 
 @media (max-width: 750px) {
@@ -296,6 +301,7 @@ nav a:hover {
   height: 370px;
   border-radius: 100%;
   object-fit: cover;
+  object-position: 80% 0%;
 }
 
 #hero-text {
@@ -423,6 +429,11 @@ nav a:hover {
 
 .education-text h4 {
   font-size: 1.5rem;
+}
+
+.education-text h3,
+.education-text p {
+  margin-bottom: 2rem;
 }
 
 /* Video */
