@@ -49,15 +49,29 @@ h1 {
   font-size: 3.5rem;
 }
 
+h2 {
+  font-size: 2.5rem;
+}
+
 h3 {
   font-size: 2rem;
 }
 h4 {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 
 i {
   margin-right: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 750px) {
+  h1 {
+    font-size: 2.5rem;
+  }
 }
 
 /* Layout */
@@ -92,13 +106,14 @@ i {
   position: relative;
   background: url("/images/laptop.jpg") center/cover no-repeat;
   color: var(--white);
+  height: 90vh;
 }
 
 .bg-img::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(2px);
   z-index: 0;
 }
@@ -146,6 +161,8 @@ i {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   color: var(--black);
   margin: 2rem;
   max-width: 40rem;
@@ -153,8 +170,19 @@ i {
   color: var(--white);
 }
 
+.card a {
+  margin-top: auto;
+  align-self: center;
+}
+
+.card h4 {
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
 .card ul {
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .card-small {
@@ -184,7 +212,7 @@ i {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.75);
   border-radius: 12px;
 }
 
@@ -201,6 +229,11 @@ i {
   background-color: var(--accent-color);
 }
 
+.card-small h4 {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
 .card-small h4,
 p,
 a {
@@ -210,7 +243,7 @@ a {
 
 .card li {
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 300;
   margin: 1rem 0 0.5rem 0;
 }
 
@@ -225,12 +258,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 8rem;
+  padding: 1.5rem 8rem;
   position: static;
   top: 0;
   overflow: hidden;
   background-color: var(--black);
-  /*  opacity: 80%; */
   z-index: 1;
   color: var(--white);
 }
@@ -267,15 +299,7 @@ nav a:hover {
   }
 
   nav ul {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-  }
-
-  nav li {
-    padding: 0.5rem 0;
-    font-size: 1rem;
-    border-bottom: 1px solid var(--white);
+    display: none;
   }
 }
 
@@ -295,6 +319,7 @@ nav a:hover {
   height: 370px;
   border-radius: 100%;
   object-fit: cover;
+  object-position: 80% 10%;
 }
 
 #hero-text {
@@ -317,6 +342,7 @@ nav a:hover {
     flex-direction: column;
     gap: 2rem;
     padding: 0 2rem;
+    height: 90vh;
   }
 
   #hero img {
@@ -324,18 +350,15 @@ nav a:hover {
     height: 250px;
   }
 
+  #hero h2 {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
   #hero .hero-text {
     text-align: center;
   }
 }
-
-/* Timeline */
-/* .timeline-container {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-} */
 
 .timeline {
   display: flex;
@@ -350,24 +373,29 @@ nav a:hover {
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: 1rem 2rem;
+  align-items: start;
 }
 
 .year {
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  margin-top: 15px;
   color: var(--white);
   display: flex;
   align-items: center;
+  grid-column: 1;
 }
 
 .info {
   display: flex;
   flex-direction: column;
   color: var(--white);
+  grid-column: 2;
 }
 
 .title {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  font-weight: 300;
   margin: 0.25rem 0;
   padding: 0.5rem;
   border: 2px solid transparent;
@@ -392,18 +420,21 @@ nav a:hover {
   display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   .timeline-item {
     grid-template-columns: 1fr;
+    gap: 0 2rem;
   }
 
   .year {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 0.25rem;
+    justify-content: center;
   }
 
   .title {
     font-size: 1.2rem;
+    text-align: center;
   }
 
   .details {
@@ -437,14 +468,30 @@ iframe {
   border: none;
 }
 
+@media (max-width: 750px) {
+  .video-container {
+    flex-direction: column;
+    max-width: 20rem;
+    text-align: center;
+  }
+
+  .video-container iframe {
+    width: 100%;
+    height: 200px;
+  }
+}
+
 /* Footer */
 footer {
   padding: 1.5rem 0;
   color: var(--white);
   text-align: center;
+  background: var(--black);
+}
+
+footer ul {
   display: flex;
   justify-content: center;
-  background: var(--black);
 }
 
 footer li {
